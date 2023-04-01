@@ -15,8 +15,9 @@ public class Product {
     private int rebateQuantity;
     private double rebatePercent;
     private String upsellProductId;
+    private String imageUrl;
 
-    public Product(String _id, String name, String id, double price, String currency, int rebateQuantity, double rebatePercent, String upsellProductId) {
+    public Product(String _id, String name, String id, double price, String currency, int rebateQuantity, double rebatePercent, String upsellProductId, String imageUrl) {
         super();
         this._id = _id;
         this.name = name;
@@ -26,6 +27,7 @@ public class Product {
         this.rebateQuantity = rebateQuantity;
         this.rebatePercent = rebatePercent;
         this.upsellProductId = upsellProductId;
+        this.imageUrl=imageUrl;
     }
 
     public String get_id() {
@@ -90,6 +92,14 @@ public class Product {
 
     public void setUpsellProductId(String upsellProductId) {
         this.upsellProductId = upsellProductId;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }
 

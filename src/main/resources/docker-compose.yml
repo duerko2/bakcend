@@ -1,0 +1,13 @@
+services:
+  mongo-on-docker:
+    image: mongo:latest
+    container_name: "mongo-on-docker"
+    ports:
+      - "27017:27017"
+  webshop:
+    image: webshop:latest
+    container_name: "webshop"
+    ports:
+      - "8080:8080"
+    links:
+      - mongo-on-docker
