@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 
-
+@CrossOrigin
 @RestController
 @RequestMapping("/products")
 @ResponseBody

@@ -3,7 +3,7 @@ package com.defaglige.webshop.pojo;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document("webshop")
+@Document("products")
 public class Product {
     @Id
     private String _id;
