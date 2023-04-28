@@ -2,6 +2,7 @@ package com.defaglige.webshop.pojo;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 @Document("baskets")
 public class Basket {
@@ -35,13 +36,9 @@ public class Basket {
     }
 
     public Basket(String id_, Item[] itemList, boolean recurring) {
+        super();
         this.id_ = id_;
         this.itemList = itemList;
         this.recurring = recurring;
     }
-}
-class Item {
-    Product product;
-    int quantity;
-    boolean giftWrap;
 }
