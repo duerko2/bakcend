@@ -1,5 +1,7 @@
-package com.defaglige.webshop;
+package com.defaglige.webshop.controller;
 
+import com.defaglige.webshop.BasketRepository;
+import com.defaglige.webshop.BasketService;
 import com.defaglige.webshop.pojo.Basket;
 import com.defaglige.webshop.pojo.NewBasketDTO;
 import com.defaglige.webshop.pojo.Product;

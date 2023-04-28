@@ -1,5 +1,7 @@
-package com.defaglige.webshop;
+package com.defaglige.webshop.controller;
 
+import com.defaglige.webshop.ProductRepository;
+import com.defaglige.webshop.ProductService;
 import com.defaglige.webshop.pojo.Product;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
