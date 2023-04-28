@@ -8,22 +8,18 @@ public class Product {
     @Id
     private String _id;
     private String name;
-
-    private String id;
     private double price;
     private String currency;
     private int rebateQuantity;
     private double rebatePercent;
     private String upsellProductId;
     private String imageUrl;
-
     private int stock;
 
-    public Product(String _id, String name, String id, double price, String currency, int rebateQuantity, double rebatePercent, String upsellProductId, String imageUrl, int stock) {
+    public Product(String _id, String name, double price, String currency, int rebateQuantity, double rebatePercent, String upsellProductId, String imageUrl, int stock) {
         super();
         this._id = _id;
         this.name = name;
-        this.id = id;
         this.price = price;
         this.currency = currency;
         this.rebateQuantity = rebateQuantity;
@@ -47,14 +43,6 @@ public class Product {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public double getPrice() {
