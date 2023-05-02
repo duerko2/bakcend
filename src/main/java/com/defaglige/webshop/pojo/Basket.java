@@ -4,11 +4,13 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import java.util.List;
+
 @Document("baskets")
 public class Basket {
     @Id
     String id_;
-    Item[] itemList;
+    List<Item> itemList;
     boolean recurring;
 
     public String getId_() {
@@ -19,11 +21,11 @@ public class Basket {
         this.id_ = id_;
     }
 
-    public Item[] getItemList() {
+    public List<Item> getItemList() {
         return itemList;
     }
 
-    public void setItemList(Item[] itemList) {
+    public void setItemList(List<Item> itemList) {
         this.itemList = itemList;
     }
 
@@ -35,7 +37,7 @@ public class Basket {
         this.recurring = recurring;
     }
 
-    public Basket(String id_, Item[] itemList, boolean recurring) {
+    public Basket(String id_, List<Item> itemList, boolean recurring) {
         super();
         this.id_ = id_;
         this.itemList = itemList;
