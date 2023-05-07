@@ -37,35 +37,4 @@ public class ProductService {
             throw new NoSuchElementException("Product does not exist");
         }
     }
-
-    public int getProductStock(String productId) throws NoSuchElementException{
-        try {
-            Product product = productRepository.findById(productId).orElseThrow();
-            return product.getStock();
-        } catch (NoSuchElementException e) {
-            throw new NoSuchElementException("Product does not exist");
-        }
-    }
-
-    //Skal fjernes på et senere tidspunkt så man kun kan få adgang igennem databasen
-    public void putStock(String productId,int stock) throws NoSuchElementException{
-        try {
-            Product product = productRepository.findById(productId).orElseThrow();
-            product.setStock(stock + product.getStock());
-            productRepository.save(product);
-        }catch (NoSuchElementException e){
-            throw new NoSuchElementException("No such product exist");
-        }
-    }
-
-    //Skal fjernes på et senere tidspunkt så man kun kan få adgang igennem databasen
-    public void setStock( String productId, int stock) throws NoSuchElementException{
-        try {
-            Product product = productRepository.findById(productId).orElseThrow();
-            product.setStock(stock);
-            productRepository.save(product);
-        }catch (NoSuchElementException e){
-            throw new NoSuchElementException("No such product exist");
-        }
-    }
 }
